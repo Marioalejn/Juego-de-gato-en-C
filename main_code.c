@@ -1,28 +1,31 @@
 #include <stdio.h>
  
-void coordenadas();
+int coordenadas();
 void gato();
 
 int main()
 {
     char array[3][3];
-    int i,j;
+    int i,j, finish_marc=0,player=1;
     //for que llena el arreglo con elementos vacíos
     for(i=0;i<3;i++){
         for(j=0;j<3;j++){
             array[i][j] = ' '; //Le puse un espacio porque al imprimirse tiene que abarcar el espacio de la cacilla
         }
     }
-    //Llamado a la función
-    coordenadas(array);
     gato(array);
+    //Llamado a la función
+    do{
+    player = coordenadas(array,player);
+    gato(array);
+    }while(finish_marc == 0);
     
     return 0;
 }
 
 //Función para que el jugador eliga la coordenada 
-void coordenadas(char array[3][3]){
-    int fila, columna, player=1;
+int coordenadas(char array[3][3], int player){
+    int fila, columna;
     printf("Ingresa la fila: ");
     scanf("%i", &fila);
     printf("Ingresa la columna: ");
@@ -36,16 +39,16 @@ void coordenadas(char array[3][3]){
         }
         if(player == 2 && array[fila][columna] == ' '){
             array[fila][columna] = 'O';
-            player = 2;
+            player = 1;
             printf("array[%i][%i]: %c", fila,columna,array[fila][columna]);//BORRARLOS, SOLO PARA VERIFICAR QUE SI GUARDARA DATOS
         }
     }
     if(!(fila>=0 && fila<=2 && columna>=0 && columna<=2)){ //else por si agrega una coordenada ocupada o que no existe en el 0,1,2 del arreglo 3x3
         printf("Coordenada seleccionada ocupada o erronea, ingresa otra...\n");
         getchar();
-        coordenadas(array);
+        coordenadas(array,player);
     }
-    
+    return player;
     //Tal vez tenga que retornar el jugador o algo
 }
  void gato(char array[3][3]){
