@@ -32,12 +32,10 @@ void coordenadas(char array[3][3]){
         if(player == 1 && array[fila][columna] == ' '){
             array[fila][columna] = 'X'; //jugador 1 es X y jugador 2 es O
             player = 2; //Para que cambie de jugador y no se pongan siempre los mismos signos
-            printf("array[%i][%i]: %c", fila,columna,array[fila][columna]); //BORRARLOS, SOLO PARA VERIFICAR QUE SI GUARDARA DATOS
         }
         if(player == 2 && array[fila][columna] == ' '){
             array[fila][columna] = 'O';
             player = 2;
-            printf("array[%i][%i]: %c", fila,columna,array[fila][columna]);//BORRARLOS, SOLO PARA VERIFICAR QUE SI GUARDARA DATOS
         }
     }
     if(!(fila>=0 && fila<=2 && columna>=0 && columna<=2)){ //else por si agrega una coordenada ocupada o que no existe en el 0,1,2 del arreglo 3x3
