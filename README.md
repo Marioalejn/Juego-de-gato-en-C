@@ -1,7 +1,8 @@
 # Juego-de-gato-en-C
-# Diego Armando Barba Arias
-# Baruc Shemuel Gutierrez Fuentes
-# Mario Alejandro Alvarez Martinez
+Integrantes del equipo:
+-Diego Armando Barba Arias
+-Baruc Shemuel Gutierrez Fuentes
+-Mario Alejandro Alvarez Martinez
 
 Actividad 05 de programación estructurada: 
 
