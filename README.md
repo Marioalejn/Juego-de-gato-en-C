@@ -1,4 +1,4 @@
-# Juego-de-gato-en-C
+# Juego-de-gato-en-C. EQuipo: "Los futuros dueños del ciber"
 Integrantes del equipo:
 -Diego Armando Barba Arias
 -Baruc Shemuel Gutierrez Fuentes
