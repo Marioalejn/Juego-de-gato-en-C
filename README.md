@@ -1,4 +1,8 @@
 # Juego-de-gato-en-C
+# Diego Armando Barba Arias
+# Baruc Shemuel Gutierrez Fuentes
+# Mario Alejandro Alvarez Martinez
+
 Actividad 05 de programación estructurada: 
 
 - Debe diseñar un programa de Gato en C que cumpla con las siguientes especificaciones:
